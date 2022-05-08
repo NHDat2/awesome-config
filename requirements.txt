@@ -1,6 +1,0 @@
-polybar
-rofi
-kitty
-nvim
-papirus-icon-theme
-picom
