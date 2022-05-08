@@ -155,12 +155,12 @@ function screenshot(specify_region)
 	if specify_region then
 		command = "sleep 0.2; "..command.." -s --freeze"
 	end
-	local target="/home/datnh/Pictures/Screenshots/%Y-%m-%d-%T.png"
+	local target="$HOME/Pictures/Screenshots/%Y-%m-%d-%T.png"
 	-- This code is a mess and needs to be changed.
 	awful.spawn.easy_async_with_shell(command.." "..target,
 		function(out,err)
 			if err == "" then
-				awful.spawn.easy_async_with_shell("notify-send \"Screenshot captured\" -i ~/Pictures/Screenshots/$(ls /home/lorago/Pictures/Screenshots/ -t | head -1)")
+				awful.spawn.easy_async_with_shell("notify-send \"Screenshot captured\" -i ~/Pictures/Screenshots/$(ls $HOME/Pictures/Screenshots/ -t | head -1)")
 			end
 		end)
 end
