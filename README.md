@@ -1,6 +1,6 @@
 ## awesome
 <p align="center">
-	<img src="screenshot.png" align="right" width="600px">
+	<img src="screenshot.png" align="right" width="500px">
 </p>
 
 ### Welcome!
