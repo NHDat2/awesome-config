@@ -44,6 +44,19 @@ mytextclock = wibox.widget {
 	right = 12
 }
 
+local calender_tt = awful.tooltip{
+    objects = { mytextclock },
+    mode = "outside",
+}
+local month_calendar = awful.widget.calendar_popup.month({
+    margin = 12,
+    style_month = {
+        border_width = 7,
+        shape = gears.shape.rounded_rect
+    }
+})
+month_calendar:attach( mytextclock, "tr" )
+
 -- Creates the cpu widget.
 local cpu_widget = wibox.widget{
     {
