@@ -39,7 +39,7 @@ local theme_path = string.format("%s/.config/awesome/themes/%s/theme.lua", os.ge
 beautiful.init(theme_path)
 
 local bling    = require("bling")
-local awestore = require("awestore")
+-- local awestore = require("awestore")
 
 local nconf = naughty.config
 nconf.defaults.shape = function(cr, w, h)
@@ -59,10 +59,10 @@ bling.widget.tag_preview.enable {
 -----------------
 -- scratchpads --
 -----------------
-local anim_y = awestore.tweened(1100, {
-	duration = 300,
-	easing	 = awestore.easing.cubic_in_out
-})
+-- local anim_y = awestore.tweened(1100, {
+-- 	duration = 300,
+-- 	easing	 = awestore.easing.cubic_in_out
+-- })
 local term_scratch = bling.module.scratchpad:new {
 	command					= "alacritty --class term_pad",
 	rule					= { instance = "term_pad" },
@@ -72,12 +72,12 @@ local term_scratch = bling.module.scratchpad:new {
 	geometry				= {x=560, y=240, height=600, width=800},
 	reapply					= true,
 	dont_focus_before_close = false,
-	awestore				= {y = anim_y}
+	-- awestore				= {y = anim_y}
 }
-local anim_y = awestore.tweened(1100, {
-	duration = 300,
-	easing	 = awestore.easing.cubic_in_out
-})
+-- local anim_y = awestore.tweened(1100, {
+-- 	duration = 300,
+-- 	easing	 = awestore.easing.cubic_in_out
+-- })
 local discord_scratch = bling.module.scratchpad:new {
 	command					= "discord",
 	rule					= { instance = "discord" },
@@ -87,12 +87,12 @@ local discord_scratch = bling.module.scratchpad:new {
 	geometry				= {x=410, y=140, height=800, width=1100},
 	reapply					= true,
 	dont_focus_before_close = false,
-	awestore				= {y = anim_y}
+	-- awestore				= {y = anim_y}
 }
-local anim_y = awestore.tweened(1100, {
-	duration = 300,
-	easing	 = awestore.easing.cubic_in_out
-})
+-- local anim_y = awestore.tweened(1100, {
+-- 	duration = 300,
+-- 	easing	 = awestore.easing.cubic_in_out
+-- })
 local spotify_scratch = bling.module.scratchpad:new {
 	command					= "spotify",
 	rule					= { instance = "spotify" },
@@ -102,7 +102,7 @@ local spotify_scratch = bling.module.scratchpad:new {
 	geometry				= {x=410, y=140, height=800, width=1100},
 	reapply					= true,
 	dont_focus_before_close = false,
-	awestore				= {y = anim_y}
+	-- awestore				= {y = anim_y}
 }
 
 terminal   = "kitty"
