@@ -1,0 +1,15 @@
+[submodule "vim-config"]
+	path = vim-config
+	url = https://github.com/tuandzung/vim-config.git
+[submodule "bling"]
+	path = bling
+	url = https://github.com/BlingCorp/bling.git
+[submodule "awesome/rubato"]
+	path = awesome/rubato
+	url = https://github.com/andOrlando/rubato.git
+[submodule "awesome/bling"]
+	path = awesome/bling
+	url = https://github.com/BlingCorp/bling.git
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/tuandzung/vim-config.git
