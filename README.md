@@ -25,4 +25,4 @@ Shell | `Zsh`
 * `Zathura`: Read Pdf
 * `Bling`: Layouts for window management
 * `rubato`: Creates Smooth Animations
-
+* `scrot`: ScreenShot
