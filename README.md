@@ -26,3 +26,4 @@ Shell | `Zsh`
 * `Bling`: Layouts for window management
 * `rubato`: Creates Smooth Animations
 * `scrot`: ScreenShot
+* `xclip`: copy from neovim to other application
