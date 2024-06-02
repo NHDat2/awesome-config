@@ -11,7 +11,8 @@ local help_utils = require("help_utils")
 local rubato 	 = require("rubato")
 local bling 	 = require("bling")
 local utils = require("util.utils")
--- beautiful.init("~/.config/awesome/themes/miat/theme.lua")
+
+beautiful.init("~/.config/awesome/themes/something/theme.lua")
 
 local cmd_usg = "top -b -n 1 | awk '/Cpu/ { print $2 }'"
 local cmd_temp = "sensors | awk '/Package id 0:/ { print $4 }' | sed 's/+//'"
@@ -522,7 +523,7 @@ awful.screen.connect_for_each_screen(function(s)
 		widget = wibox.container.margin
 	}
     volume_width = args.width
-	width = 80
+	width = 100
 	args.width = width
 
 	args.x = sgeo.x + sgeo.width - width - old_width - volume_width - gap * 6
@@ -550,7 +551,7 @@ awful.screen.connect_for_each_screen(function(s)
 		widget = wibox.container.margin
 	}
     cpu_width = args.width
-	width = 90
+	width = 100
 	args.width = width
 
 	args.x = sgeo.x + sgeo.width - width - old_width - volume_width - cpu_width - gap * 8

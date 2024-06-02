@@ -175,8 +175,8 @@ globalkeys = gears.table.join(
         { description = "view previous", group = "tag" }),
     awful.key({ modkey }, "Right", awful.tag.viewnext,
         { description = "view next", group = "tag" }),
-    awful.key({ modkey }, "Escape", awful.tag.history.restore,
-        { description = "go back", group = "tag" }),
+    -- awful.key({ modkey }, "Escape", awful.tag.history.restore,
+        -- { description = "go back", group = "tag" }),
 
     awful.key({ modkey }, "p", function() naughty.notify({ title = "Title", text = "This is a test notification." }) end,
         { description = "test notification", group = "debug" }),
@@ -257,33 +257,48 @@ globalkeys = gears.table.join(
         { description = "run rofi", group = "launcher" }),
 
     -- Audio
-    awful.key({}, "XF86AudioRaiseVolume", function()
+    -- awful.key({}, "XF86AudioRaiseVolume", function()
+        -- awful.spawn.easy_async_with_shell("pactl set-sink-volume @DEFAULT_SINK@ +5%",
+            -- function() awesome.emit_signal("volume_refresh") end)
+    -- end, { description = "raise volume by 5%", group = "audio" }),
+    -- awful.key({}, "XF86AudioLowerVolume", function()
+        -- awful.spawn.easy_async_with_shell("pactl set-sink-volume @DEFAULT_SINK@ -5%",
+            -- function() awesome.emit_signal("volume_refresh") end)
+    -- end, { description = "lower volume by 5%", group = "audio" }),
+    -- awful.key({}, "XF86AudioMute", function()
+        -- awful.spawn.easy_async_with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle",
+            -- function() awesome.emit_signal("volume_refresh") end)
+    -- end, { description = "mute audio", group = "audio" }),
+
+    awful.key({ modkey }, "Up", function()
         awful.spawn.easy_async_with_shell("pactl set-sink-volume @DEFAULT_SINK@ +5%",
             function() awesome.emit_signal("volume_refresh") end)
     end, { description = "raise volume by 5%", group = "audio" }),
-    awful.key({}, "XF86AudioLowerVolume", function()
+    awful.key({ modkey }, "Down", function()
         awful.spawn.easy_async_with_shell("pactl set-sink-volume @DEFAULT_SINK@ -5%",
             function() awesome.emit_signal("volume_refresh") end)
     end, { description = "lower volume by 5%", group = "audio" }),
-    awful.key({}, "XF86AudioMute", function()
+    awful.key({ modkey }, "Escape", function()
         awful.spawn.easy_async_with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle",
             function() awesome.emit_signal("volume_refresh") end)
     end, { description = "mute audio", group = "audio" }),
 
-    -- Brightness
-    awful.key({ modkey }, "Up", function()
-        awful.spawn.easy_async_with_shell("/home/datnh/.config/awesome/brightness.sh up 700",
-            function()
-                awesome.emit_signal("brightness_refresh")
-            end)
-    end, { description = "increase brightness", group = "brightness" }),
 
-    awful.key({ modkey }, "Down", function()
-        awful.spawn.easy_async_with_shell("/home/datnh/.config/awesome/brightness.sh down 700",
-            function()
-                awesome.emit_signal("brightness_refresh")
-            end)
-    end, { description = "decrease brightness", group = "brightness" }),
+    -- Brightness
+    -- awful.key({ modkey }, "Up", function()
+        -- awful.spawn.easy_async_with_shell("/home/datnh/.config/awesome/brightness.sh up 700",
+            -- function()
+                -- awesome.emit_signal("brightness_refresh")
+            -- end)
+    -- end, { description = "increase brightness", group = "brightness" }),
+
+    -- awful.key({ modkey }, "Down", function()
+        -- awful.spawn.easy_async_with_shell("/home/datnh/.config/awesome/brightness.sh down 700",
+            -- function()
+                -- awesome.emit_signal("brightness_refresh")
+            -- end)
+    -- end, { description = "decrease brightness", group = "brightness" }),
+
 
     -- Browser
     awful.key({ modkey }, "F2", function() awful.spawn("firefox") end,
